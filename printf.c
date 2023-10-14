@@ -15,7 +15,19 @@ int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
+<<<<<<< HEAD
 
+=======
+/**
+ *_printf - function that produces output according to a format.
+ *@foramt: 
+ *
+ *
+ *
+ *
+ *
+ */
+>>>>>>> 4efe06c9760d84a40a2aa6b31b518da02e8e5217
 int _printf(const char *format, ...)
 {
 if (format == '\0')
@@ -64,3 +76,47 @@ format++;
 va_end(args);
 return counter;
 }
+<<<<<<< HEAD
+=======
+
+void print_string(char *str)
+{
+	int counte =  0;
+for (int i = 0;str[i] != '\0';i++ )
+	{
+		_putchar(str[i]);
+		counte++;
+	}
+}
+void print_char(char *c)
+{
+	int countr = 0;
+	for (int i = 0; c[i]; c++) {
+        _putchar(c[i]);
+		countr++;
+
+	}
+}
+void decimalTobinary(unsigned int d)
+{
+if (d == 0) {
+        _putchar('0');
+        return;
+    }
+int quotient[32];
+int i = 0;
+while(d > 0)
+{
+  quotient[i] = d % 2;
+  d = d / 2;
+
+i++;
+}
+for (int j = i - 1; j >= 0; j--) {
+       _putchar( quotient[j] + '0');
+}
+}
+int main()
+{
+}
+>>>>>>> 4efe06c9760d84a40a2aa6b31b518da02e8e5217
