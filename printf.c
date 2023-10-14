@@ -15,16 +15,15 @@ int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
-
-
-
-
-
-
-
-
-
-
+/**
+ *_printf - function that produces output according to a format.
+ *@foramt: 
+ *
+ *
+ *
+ *
+ *
+ */
 int _printf(const char *format, ...)
 {
 if (format == "\0")
@@ -75,15 +74,19 @@ return counter;
 
 void print_string(char *str)
 {
+	int counte =  0;
 for (int i = 0;str[i] != '\0';i++ )
 	{
 		_putchar(str[i]);
+		counte++;
 	}
 }
 void print_char(char *c)
 {
+	int countr = 0;
 	for (int i = 0; c[i]; c++) {
         _putchar(c[i]);
+		countr++;
 
 	}
 }
