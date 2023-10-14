@@ -29,7 +29,7 @@ while(*format)
         {
         	        print_char(va_arg(args, char*));
 			counter++;
-        }		int_string(va_arg(args, char*));
+        }		print_string(va_arg(args, char*));
 		counter++;
 	}
 		else if(*format == 'c')
