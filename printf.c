@@ -4,23 +4,52 @@
 #include <unistd.h>
 #include <unistd.h>
 
+<<<<<<< HEAD
 
+=======
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
+<<<<<<< HEAD
+
+=======
+/**
+ *_printf - function that produces output according to a format.
+ *@foramt: 
+ *
+ *
+ *
+ *
+ *
+ */
+>>>>>>> 4efe06c9760d84a40a2aa6b31b518da02e8e5217
+>>>>>>> 1617df71cf1e427efbb6b58bd75804252826ab71
 int _printf(const char *format, ...)
 {
-if (format == "\0")
+if (format == '\0')
 	return 0;
 int i = 0;
 int counter = 0;
 
 va_list args;
 va_start(args, format); 
-while(*format){
+while(*format)
+{
 	if(*format == '%')
 	{
 		format++;
 
 		if (*format == 's')
 	{
+<<<<<<< HEAD
 			print_string(va_arg(args, char*));
 			counter++;
 	}	
@@ -29,6 +58,16 @@ while(*format){
         	        print_char(va_arg(args, char*));
 			counter++;
         }
+=======
+		print_string(va_arg(args, char*));
+		counter++;
+	}
+		else if(*format == 'c')
+	{
+		print_char(va_arg(args, char*));
+		counter++;	
+	}
+>>>>>>> 1617df71cf1e427efbb6b58bd75804252826ab71
 		else if(*format ==  '%')
 	{
 			_putchar('%');
@@ -36,7 +75,7 @@ while(*format){
 
 	}
 		if (*format == '\0')
-                break;
+		break;
 		else if (*format == 'b')
 		{
 			decimalTobinary(va_arg(args,unsigned int));
@@ -52,4 +91,50 @@ format++;
 va_end(args);
 return counter;
 }
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+void print_string(char *str)
+{
+	int counte =  0;
+for (int i = 0;str[i] != '\0';i++ )
+	{
+		_putchar(str[i]);
+		counte++;
+	}
+}
+void print_char(char *c)
+{
+	int countr = 0;
+	for (int i = 0; c[i]; c++) {
+        _putchar(c[i]);
+		countr++;
+
+	}
+}
+void decimalTobinary(unsigned int d)
+{
+if (d == 0) {
+        _putchar('0');
+        return;
+    }
+int quotient[32];
+int i = 0;
+while(d > 0)
+{
+  quotient[i] = d % 2;
+  d = d / 2;
+
+i++;
+}
+for (int j = i - 1; j >= 0; j--) {
+       _putchar( quotient[j] + '0');
+}
+}
+int main()
+{
+}
+>>>>>>> 4efe06c9760d84a40a2aa6b31b518da02e8e5217
+>>>>>>> 1617df71cf1e427efbb6b58bd75804252826ab71
