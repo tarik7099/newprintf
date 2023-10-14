@@ -22,6 +22,7 @@ int _printf(const char *format, ...)
     {
         if (*format == '%')
         {
+<<<<<<< HEAD
             format++;
 
             if (*format == 's')
@@ -60,4 +61,44 @@ int _printf(const char *format, ...)
 
     va_end(args);
     return counter;
+=======
+        	        print_char(va_arg(args, char*));
+			counter++;
+        }
+		
+	
+		else if(*format == 'c')
+	{
+		print_char(va_arg(args, char*));
+		counter++;	
+	}
+	else if (*format == 'd' || *format == 'i')
+	{
+		print_int(va_arg(args, int));
+		counter++;
+	}
+		else if(*format ==  '%')
+	{
+			_putchar('%');
+			counter++;
+
+	}
+		else if (*format == '\0')
+			break;
+		else if (*format == 'b')
+		{
+			decimalTobinary(va_arg(args,unsigned int));
+		}
+        
+}
+	else
+{
+	_putchar(*format);
+	counter++;
+}
+
+
+va_end(args);
+return counter;
+>>>>>>> 7d4c56c40d8bafd1c0e10f8b7cafc2745dcc4e90
 }
