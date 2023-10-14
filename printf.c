@@ -31,9 +31,9 @@ while(*format)
         {
         	        print_char(va_arg(args, char*));
 			counter++;
-        }		print_string(va_arg(args, char*));
-		counter++;
-	}
+        }
+		
+	
 		else if(*format == 'c')
 	{
 		print_char(va_arg(args, char*));
@@ -50,8 +50,8 @@ while(*format)
 			counter++;
 
 	}
-		if (*format == '\0')
-		break;
+		else if (*format == '\0')
+			break;
 		else if (*format == 'b')
 		{
 			decimalTobinary(va_arg(args,unsigned int));
@@ -64,7 +64,7 @@ while(*format)
 	counter++;
 }
 
-}
+
 va_end(args);
 return counter;
 }
