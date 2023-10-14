@@ -63,7 +63,7 @@ while(*format)
 	_putchar(*format);
 	counter++;
 }
-format++;
+
 }
 va_end(args);
 return counter;
