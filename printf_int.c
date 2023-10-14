@@ -1,3 +1,9 @@
+#include "main.h"
+/**
+ * print_int - Entry point
+ * @n: input
+ * Return: Always 0
+ */
 int print_int(int n)
 {
 if (n / 10)

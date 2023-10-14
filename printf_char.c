@@ -1,4 +1,9 @@
 #include "main.h"
+/**
+ * print_char - Entry point
+ * @c: input
+ * Return: Always 0
+ */
 void print_char(char *c)
 {
         int countr = 0;
