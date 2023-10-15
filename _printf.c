@@ -55,10 +55,13 @@ int counter = 0;
                 _putchar('%');
                 counter++;
             }
-	    else  if (*format == 'b')  // Placeholder for handling %b
-            {
-                decimalTobinary(va_arg(args,unsigned int));
-            }
+		
+	   	 else if (*format == '\0')
+                break;
+                else if (*format == 'b')
+                {
+                        decimalTobinary(va_arg(args,unsigned int));
+         	}
         }
         else
         {
@@ -89,7 +92,7 @@ int len;
     printf("Length:[%d, %i]\n", len2, len2);
 
 int max = 98;
-_printf("b",max);
+_printf("%b", max);
 
 
 
