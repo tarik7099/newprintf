@@ -9,7 +9,7 @@
  */
 int _printf(const char *format, ...)
 {
-if (format == '\0')
+if (*format == '\0')
 	return 0;
 int i = 0;
 int counter = 0;
@@ -59,12 +59,18 @@ while(*format)
         
 }
 	else
-{
+	{
 	_putchar(*format);
 	counter++;
+	}
+
+}
+va_end(args);
+return counter;
 }
 
 
-va_end(args);
-return counter;
+int main()
+{
+    _printf("String:[%s]\n", "I am a string !");
 }
